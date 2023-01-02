@@ -1,0 +1,2 @@
+def: "The assembly or remodeling of chromatin composed of DNA complexed with histones, other associated proteins, and sometimes RNA." [PMID:20404130]
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of telomeres, terminal regions of a linear chromosome that include the telomeric DNA repeats and associated proteins." [GOC:dph, GOC:jl, GOC:mah]

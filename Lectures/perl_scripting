@@ -1,0 +1,323 @@
+Perl scripting
+
+[biF22_14@Mozart ~]$ nano t1.pl
+[biF22_14@Mozart ~]$ perl t1.pl
+Hellooooooooooooooo[biF22_14@Mozart ~]$ ./t1.pl
+-bash: ./t1.pl: Permission denied
+
+By default, nano does not create an executable file. Change the permission to make the file executable
+[biF22_14@Mozart ~]$ chmod +x t1.pl
+[biF22_14@Mozart ~]$ ls -lh
+-rwxr-xr-x. 1 biF22_14 biF22_14   46 Sep 23 10:33 t1.pl
+[biF22_14@Mozart ~]$ ./t1.pl
+Hellooooooooooooooo
+
+
+#!/usr/bin/perl
+use warnings;
+@testing = ();
+push(@testing, 'lettuce');
+push(@testing, 'tomatoes');
+push(@testing, 'cheese');
+print "My element \$testing[0] value is $testing[0]\n";
+print "My element \$testing[1] value is $testing[1]\n";
+print "My element \$testing[2] value is $testing[2]\n";
+unshift(@testing, 'bacon');
+print "My element \$testing[0] value is $testing[0]\n";
+print "My element \$testing[1] value is $testing[1]\n";
+print "My element \$testing[2] value is $testing[2]\n";
+print "My element \@testing[0] value is @testing[0]\n";
+print "My element \@testing[1] value is @testing[1]\n";
+print "My element \@testing[2] value is @testing[2]\n";
+print "@testing"."\n";
+print "bjhbdsj"."$testing";
+
+$testing[0] acts as a scalar so instead of @testing[0], $testing[0] should be used
+
+Exercise 4
+#!/usr/bin/perl
+use warnings;
+@testing = ();
+push(@testing, 'lettuce');
+push(@testing, 'tomatoes');
+push(@testing, 'cheese');
+print "My element \$testing[0] value is $testing[0]\n";
+print "My element \$testing[1] value is $testing[1]\n";
+print "My element \$testing[2] value is $testing[2]\n";
+unshift(@testing, 'bacon');
+print "My element \$testing[0] value is $testing[0]\n";
+print "My element \$testing[1] value is $testing[1]\n";
+print "My element \$testing[2] value is $testing[2]\n";
+print "My element \@testing[0] value is @testing[0]\n";
+print "My element \@testing[1] value is @testing[1]\n";
+print "My element \@testing[2] value is @testing[2]\n";
+print "@testing"."\n";
+#print "bjhbdsj"."$testing";
+unshift(@testing, 'cucumbers', 'mayo', 'red peppers');
+#unshift(@testing, 'mayo');
+#unshift(@testing, 'red peppers');
+print "@testing"."\n";
+@testing = sort(@testing);
+print "@testing"."\n";
+@testing = reverse(@testing);
+print "@testing"."\n";
+$number = scalar(@testing);
+print "Number of items in array = $number \n";
+@testing = sort(reverse(@testing));
+print "@testing\n";
+
+
+
+
+Exercise 5
+#!/usr/bin/perl
+
+#$first_file = $ARGV[0];
+
+print "@ARGV\n";
+@ARGV = reverse(@ARGV);
+print "@ARGV\n";
+print "Size of \@ARGV is ".scalar(@ARGV);
+
+Exercise 6 - Hashes
+#!/usr/bin/perl
+
+%sequences = ();
+#$sequences{gene01, gene02, gene03} = 'GTCGTAGTT', 'TCATGATTT', 'TGATGGTC';
+%sequences = (
+gene01 => 'GTCGTAGTT',
+gene02 => 'TCATGATTT',
+gene03 => 'TGATGGTC',
+);
+##$sequences{gene02} = 'TCATGATTT';
+print($sequences{gene01}."\n");
+##$sequences{gene03} = 'TCATGATTT';
+$sequences{gene04} = 'ATGCGTAATC';
+print(%sequences);
+foreach $key (keys(%sequences)){
+print $key."\t".$sequences{$key}."\n";
+}
+
+
+Exercise 7
+
+#!/usr/bin/perl
+
+open IN,"<", 'Dracula.txt';
+@Bram = <IN>;
+open OUT, ">", 'Dracread.txt';
+print OUT "@Bram\n";  #this won't print to the standard output, it will print to the file.
+#for standard output
+print "@Bram\n";
+
+Exercise 9
+#!/usr/bin/perl
+
+open IN1, "<", 'f1.txt';
+open IN2, "<", 'f2.txt';
+
+@Bram1 = <IN1>;
+@Bram2 = <IN2>;
+
+open OUT1, ">", 'fo1.txt';
+open OUT2, ">", 'fo2.txt';
+
+print "@Bram1\n@Bram2\n";
+
+print OUT1 "@Bram1\n@Bram2\n";
+print OUT2 "@Bram1\n@Bram2\n";
+
+
+
+
+Exercise 10
+#!/usr/bin/perl
+
+
+$input1 = <STDIN>;
+print "Here is the complete value of STDIN: $input1\n";
+#print "STDIN value: ".<STDIN>."\n";
+chomp($input1); #will remove the new line character
+print "Chomped value of STDIN: $input1\n";
+
+
+Exercise 12
+
+#!/usr/bin/perl
+
+use warnings;
+
+$val1 = scalar(@ARGV);
+
+print "Now I\'m multiplying by 10 :".$val1*10;
+print "\nhere is the autoincremented value".++$val1;
+print "\nhere is the squared value :".$val1**2;
+
+
+
+Exercise 13
+
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+
+print "first DNA sequence :\n";
+$input1 = <STDIN>;
+chomp($input1);
+print " second DNA sequence :\n";
+$input2 = <STDIN>;
+chomp($input2);
+print "third DNA seauqence :\n";
+$input3 = <STDIN>;
+chomp($input3);
+
+print "Final sequence is :".$input1.$input2.$input3;
+
+
+
+To get hardware information about your system:-
+$neofetch
+
+Exercise 14
+
+#!/usr/bin/perl
+
+print "What is the total number of CPU cores on this workstattion?";
+
+$input1 = <STDIN>;
+chomp($input1);
+
+$cores = 64;
+
+if ($input1 == $cores){
+print "Correct!";
+}
+else{
+print "Wrong! the correct answer is ".$cores;
+}
+
+Using unless 
+
+!/usr/bin/perl
+
+print "What is the total number of CPU cores on this workstattion?";
+
+$input1 = <STDIN>;
+chomp($input1);
+
+$cores = 64;
+
+unless ($input1 == $cores){
+print "Wrong!";
+}
+else{
+print "Correct!";
+}
+
+
+Exercise 15
+
+#!/usr/bin/perl
+
+print "What is the total number of CPU cores on this workstattion?";
+
+$input1 = <STDIN>;
+chomp($input1);
+
+print "\n What is the amount of RAM (in Gb) available?";
+$input2 = <STDIN>;
+chomp($input2);
+
+$cores = 64;
+$ram = 16;
+
+if (($input1 == $cores) && ($input2 == $ram)){
+print "Correct!";
+}
+elsif (($input1 == $cores) && ($input2 != $ram)) {
+print "Correct RAM is ".$ram;
+}
+elsif (($input1 != $cores) && ($input2 == $ram)) {
+print "Correct Number of cores is ".$cores;
+}
+else {
+print "Wrong! the correct number of cores is ".$cores."and correct RAM is ".$ram;
+}
+
+
+use Split function for assignment
+
+
+
+
+for my $i (0..$#ARGV) {
+    open IN, "<", $ARGV[$i];
+    ##print("$i value ");
+    print "\n $ARGV[$i]";
+    ##@file_content = <IN>;
+    ##chomp(@file_content);
+    my $count = 0; ## Initializing a counter;
+    while (my $line = <IN>) {
+        print "in while loop 1";
+        chomp $line;
+        print "$line\n";
+        $count++;
+        my @col = split(/\t/, $line);
+        print "\n @col";
+
+    }
+
+}
+
+
+while (my $file = shift @ARGV){
+    print "in while loop 2";
+open IN, "<", "$file";
+open HEAD, ">", "$file.head";
+open RAW, ">", "$file.raw";
+while (my $line2 = <IN>) {
+    print "in second while loop";
+chomp $line2;
+}
+}
+
+
+
+Instead of ARGV, we can custom its use 
+
+use Getopt::Long qw(GetOptions);
+similar to :- python's from Getopt.Long import GetOptions
+
+After execution of getoptions, ARGV is emptied
+
+\ -> symbol used to backreference
+
+
+
+Sprintf
+
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $number = 3.1457687978488;
+
+my $number1 = sprintf("%.5f", $number); ## Round up to 5 digits after decimal
+my $number2 = sprintf("%05d", $number); ## Reformatting width to 5 char. (e.g. 00003)
+my $number3 = sprintf("%010.4f", $number); ## Padding zeroes + floating (00003.1416 => %010.4f)
+my $number4 = sprintf("%e", $number); ## Convert decimal notation to scientific number
+my $number5 = sprintf("%f", $number);
+
+print "number 1:-".$number1;
+print "\n number 2:-".$number2;
+print "\n number 3:-".$number3;
+print "\n number 4:-".$number4;
+print "\n number 5:-".$number5;
+
+
+Syllabus for exam:- till die
+
+
+

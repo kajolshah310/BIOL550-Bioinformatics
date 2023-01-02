@@ -1,0 +1,52 @@
+CP075158.1	Genbank	tRNA	44592	44663	.	+	.	ID=rna-GPK93_01g00310;Parent=gene-GPK93_01g00310;Note=tRNA-Gly(UCC);gbkey=tRNA;locus_tag=GPK93_01g00310;product=tRNA-Gly
+CP075158.1	Genbank	tRNA	83092	83173	.	+	.	ID=rna-GPK93_01g00730;Parent=gene-GPK93_01g00730;Note=tRNA-Ser(AGA);gbkey=tRNA;locus_tag=GPK93_01g00730;product=tRNA-Ser
+CP075158.1	Genbank	rRNA	181641	182933	.	+	.	ID=rna-GPK93_01g01560;Parent=gene-GPK93_01g01560;gbkey=rRNA;locus_tag=GPK93_01g01560;product=small subunit ribosomal RNA
+CP075158.1	Genbank	rRNA	182974	185414	.	+	.	ID=rna-GPK93_01g01570;Parent=gene-GPK93_01g01570;gbkey=rRNA;locus_tag=GPK93_01g01570;product=large subunit ribosomal RNA
+CP075159.1	Genbank	tRNA	68432	68502	.	+	.	ID=rna-GPK93_02g02130;Parent=gene-GPK93_02g02130;Note=tRNA-Thr(CGU);gbkey=tRNA;locus_tag=GPK93_02g02130;product=tRNA-Thr
+CP075159.1	Genbank	tRNA	109309	109380	.	+	.	ID=rna-GPK93_02g02510;Parent=gene-GPK93_02g02510;Note=tRNA-Pro(AGG);gbkey=tRNA;locus_tag=GPK93_02g02510;product=tRNA-Pro
+CP075159.1	Genbank	tRNA	184143	184224	.	+	.	ID=rna-GPK93_02g03170;Parent=gene-GPK93_02g03170;Note=tRNA-Leu(AAG);gbkey=tRNA;locus_tag=GPK93_02g03170;product=tRNA-Leu
+CP075159.1	Genbank	rRNA	205462	206753	.	+	.	ID=rna-GPK93_02g03300;Parent=gene-GPK93_02g03300;gbkey=rRNA;locus_tag=GPK93_02g03300;product=small subunit ribosomal RNA
+CP075159.1	Genbank	rRNA	206794	209228	.	+	.	ID=rna-GPK93_02g03310;Parent=gene-GPK93_02g03310;gbkey=rRNA;locus_tag=GPK93_02g03310;product=large subunit ribosomal RNA
+CP075160.1	Genbank	tRNA	45578	45660	.	+	.	ID=rna-GPK93_03g03600;Parent=gene-GPK93_03g03600;Note=tRNA-Ser(UGA);gbkey=tRNA;locus_tag=GPK93_03g03600;product=tRNA-Ser
+CP075160.1	Genbank	tRNA	155909	155981	.	+	.	ID=rna-GPK93_03g04590;Parent=gene-GPK93_03g04590;Note=tRNA-Val(UAC);gbkey=tRNA;locus_tag=GPK93_03g04590;product=tRNA-Val
+CP075160.1	Genbank	rRNA	208954	210246	.	+	.	ID=rna-GPK93_03g05030;Parent=gene-GPK93_03g05030;gbkey=rRNA;locus_tag=GPK93_03g05030;product=small subunit ribosomal RNA
+CP075160.1	Genbank	rRNA	210287	212724	.	+	.	ID=rna-GPK93_03g05040;Parent=gene-GPK93_03g05040;gbkey=rRNA;locus_tag=GPK93_03g05040;product=large subunit ribosomal RNA
+CP075161.1	Genbank	tRNA	28238	28311	.	+	.	ID=rna-GPK93_04g05260;Parent=gene-GPK93_04g05260;Note=tRNA-Ile(AAU);gbkey=tRNA;locus_tag=GPK93_04g05260;product=tRNA-Ile
+CP075161.1	Genbank	tRNA	60145	60259	.	+	.	ID=rna-GPK93_04g05520;Parent=gene-GPK93_04g05520;Note=tRNA-Ile(UAU);gbkey=tRNA;locus_tag=GPK93_04g05520;product=tRNA-Ile
+CP075161.1	Genbank	tRNA	183357	183429	.	+	.	ID=rna-GPK93_04g06600;Parent=gene-GPK93_04g06600;Note=tRNA-Met(CAU);gbkey=tRNA;locus_tag=GPK93_04g06600;product=tRNA-Met
+CP075161.1	Genbank	tRNA	185414	185485	.	+	.	ID=rna-GPK93_04g06620;Parent=gene-GPK93_04g06620;Note=tRNA-Pro(UGG);gbkey=tRNA;locus_tag=GPK93_04g06620;product=tRNA-Pro
+CP075161.1	Genbank	rRNA	219544	220835	.	+	.	ID=rna-GPK93_04g06970;Parent=gene-GPK93_04g06970;gbkey=rRNA;locus_tag=GPK93_04g06970;product=small subunit ribosomal RNA
+CP075161.1	Genbank	rRNA	220876	223309	.	+	.	ID=rna-GPK93_04g06980;Parent=gene-GPK93_04g06980;gbkey=rRNA;locus_tag=GPK93_04g06980;product=large subunit ribosomal RNA
+CP075162.1	Genbank	tRNA	98097	98179	.	+	.	ID=rna-GPK93_05g07670;Parent=gene-GPK93_05g07670;Note=tRNA-Leu(UAA);gbkey=tRNA;locus_tag=GPK93_05g07670;product=tRNA-Leu
+CP075162.1	Genbank	tRNA	129242	129314	.	+	.	ID=rna-GPK93_05g07980;Parent=gene-GPK93_05g07980;Note=tRNA-Thr(AGU);gbkey=tRNA;locus_tag=GPK93_05g07980;product=tRNA-Thr
+CP075162.1	Genbank	rRNA	188849	188966	.	+	.	ID=rna-GPK93_05g08530;Parent=gene-GPK93_05g08530;gbkey=rRNA;locus_tag=GPK93_05g08530;product=5S ribosomal RNA
+CP075162.1	Genbank	rRNA	217954	219245	.	+	.	ID=rna-GPK93_05g08810;Parent=gene-GPK93_05g08810;gbkey=rRNA;locus_tag=GPK93_05g08810;product=small subunit ribosomal RNA
+CP075162.1	Genbank	rRNA	219286	221725	.	+	.	ID=rna-GPK93_05g08820;Parent=gene-GPK93_05g08820;gbkey=rRNA;locus_tag=GPK93_05g08820;product=large subunit ribosomal RNA
+CP075163.1	Genbank	tRNA	125136	125207	.	+	.	ID=rna-GPK93_06g09810;Parent=gene-GPK93_06g09810;Note=tRNA-Trp(CCA);gbkey=tRNA;locus_tag=GPK93_06g09810;product=tRNA-Trp
+CP075163.1	Genbank	tRNA	169374	169446	.	+	.	ID=rna-GPK93_06g10200;Parent=gene-GPK93_06g10200;Note=tRNA-Arg(ACG);gbkey=tRNA;locus_tag=GPK93_06g10200;product=tRNA-Arg
+CP075163.1	Genbank	tRNA	205504	205575	.	+	.	ID=rna-GPK93_06g10580;Parent=gene-GPK93_06g10580;Note=tRNA-Gln(CUG);gbkey=tRNA;locus_tag=GPK93_06g10580;product=tRNA-Gln
+CP075163.1	Genbank	rRNA	222378	223669	.	+	.	ID=rna-GPK93_06g10690;Parent=gene-GPK93_06g10690;gbkey=rRNA;locus_tag=GPK93_06g10690;product=small subunit ribosomal RNA
+CP075163.1	Genbank	rRNA	223709	226145	.	+	.	ID=rna-GPK93_06g10700;Parent=gene-GPK93_06g10700;gbkey=rRNA;locus_tag=GPK93_06g10700;product=large subunit ribosomal RNA
+CP075164.1	Genbank	tRNA	176310	176380	.	+	.	ID=rna-GPK93_07g12270;Parent=gene-GPK93_07g12270;Note=tRNA-Arg(UCG);gbkey=tRNA;locus_tag=GPK93_07g12270;product=tRNA-Arg
+CP075164.1	Genbank	tRNA	177231	177303	.	+	.	ID=rna-GPK93_07g12290;Parent=gene-GPK93_07g12290;Note=tRNA-Lys(UUU);gbkey=tRNA;locus_tag=GPK93_07g12290;product=tRNA-Lys
+CP075164.1	Genbank	tRNA	182927	182998	.	+	.	ID=rna-GPK93_07g12340;Parent=gene-GPK93_07g12340;Note=tRNA-Ala(AGC);gbkey=tRNA;locus_tag=GPK93_07g12340;product=tRNA-Ala
+CP075164.1	Genbank	rRNA	231392	232681	.	+	.	ID=rna-GPK93_07g12780;Parent=gene-GPK93_07g12780;gbkey=rRNA;locus_tag=GPK93_07g12780;product=small subunit ribosomal RNA
+CP075164.1	Genbank	rRNA	232721	235158	.	+	.	ID=rna-GPK93_07g12790;Parent=gene-GPK93_07g12790;gbkey=rRNA;locus_tag=GPK93_07g12790;product=large subunit ribosomal RNA
+CP075165.1	Genbank	tRNA	78011	78082	.	+	.	ID=rna-GPK93_08g13480;Parent=gene-GPK93_08g13480;Note=tRNA-Cys(GCA);gbkey=tRNA;locus_tag=GPK93_08g13480;product=tRNA-Cys
+CP075165.1	Genbank	tRNA	116968	117040	.	+	.	ID=rna-GPK93_08g13880;Parent=gene-GPK93_08g13880;Note=tRNA-Val(AAC);gbkey=tRNA;locus_tag=GPK93_08g13880;product=tRNA-Val
+CP075165.1	Genbank	tRNA	221098	221170	.	+	.	ID=rna-GPK93_08g14920;Parent=gene-GPK93_08g14920;Note=tRNA-Asn(GUU);gbkey=tRNA;locus_tag=GPK93_08g14920;product=tRNA-Asn
+CP075165.1	Genbank	rRNA	238771	240054	.	+	.	ID=rna-GPK93_08g15100;Parent=gene-GPK93_08g15100;gbkey=rRNA;locus_tag=GPK93_08g15100;product=small subunit ribosomal RNA
+CP075165.1	Genbank	rRNA	240095	242510	.	+	.	ID=rna-GPK93_08g15110;Parent=gene-GPK93_08g15110;gbkey=rRNA;locus_tag=GPK93_08g15110;product=large subunit ribosomal RNA
+CP075166.1	Genbank	tRNA	216210	216281	.	+	.	ID=rna-GPK93_09g17090;Parent=gene-GPK93_09g17090;Note=tRNA-Glu(UUC);gbkey=tRNA;locus_tag=GPK93_09g17090;product=tRNA-Glu
+CP075166.1	Genbank	tRNA	227253	227323	.	+	.	ID=rna-GPK93_09g17170;Parent=gene-GPK93_09g17170;Note=tRNA-His(GUG);gbkey=tRNA;locus_tag=GPK93_09g17170;product=tRNA-His
+CP075166.1	Genbank	rRNA	260922	262214	.	+	.	ID=rna-GPK93_09g17400;Parent=gene-GPK93_09g17400;gbkey=rRNA;locus_tag=GPK93_09g17400;product=small subunit ribosomal RNA
+CP075166.1	Genbank	rRNA	262253	264689	.	+	.	ID=rna-GPK93_09g17410;Parent=gene-GPK93_09g17410;gbkey=rRNA;locus_tag=GPK93_09g17410;product=large subunit ribosomal RNA
+CP075167.1	Genbank	tRNA	45899	45980	.	+	.	ID=rna-GPK93_10g17780;Parent=gene-GPK93_10g17780;Note=tRNA-Ser(GCU);gbkey=tRNA;locus_tag=GPK93_10g17780;product=tRNA-Ser
+CP075167.1	Genbank	tRNA	63942	64012	.	+	.	ID=rna-GPK93_10g17970;Parent=gene-GPK93_10g17970;Note=tRNA-Pro(CGG);gbkey=tRNA;locus_tag=GPK93_10g17970;product=tRNA-Pro
+CP075167.1	Genbank	tRNA	155305	155375	.	+	.	ID=rna-GPK93_10g18660;Parent=gene-GPK93_10g18660;Note=tRNA-Ala(CGC);gbkey=tRNA;locus_tag=GPK93_10g18660;product=tRNA-Ala
+CP075167.1	Genbank	rRNA	270065	271357	.	+	.	ID=rna-GPK93_10g19470;Parent=gene-GPK93_10g19470;gbkey=rRNA;locus_tag=GPK93_10g19470;product=small subunit ribosomal RNA
+CP075167.1	Genbank	rRNA	271397	273837	.	+	.	ID=rna-GPK93_10g19480;Parent=gene-GPK93_10g19480;gbkey=rRNA;locus_tag=GPK93_10g19480;product=large subunit ribosomal RNA
+CP075168.1	Genbank	tRNA	49879	49951	.	+	.	ID=rna-GPK93_11g19860;Parent=gene-GPK93_11g19860;Note=tRNA-Met(CAU);gbkey=tRNA;locus_tag=GPK93_11g19860;product=tRNA-Met
+CP075168.1	Genbank	tRNA	150543	150614	.	+	.	ID=rna-GPK93_11g20830;Parent=gene-GPK93_11g20830;Note=tRNA-Gly(CCC);gbkey=tRNA;locus_tag=GPK93_11g20830;product=tRNA-Gly
+CP075168.1	Genbank	rRNA	262093	263384	.	+	.	ID=rna-GPK93_11g21810;Parent=gene-GPK93_11g21810;gbkey=rRNA;locus_tag=GPK93_11g21810;product=small subunit ribosomal RNA
+CP075168.1	Genbank	rRNA	263425	265856	.	+	.	ID=rna-GPK93_11g21820;Parent=gene-GPK93_11g21820;gbkey=rRNA;locus_tag=GPK93_11g21820;product=large subunit ribosomal RNA

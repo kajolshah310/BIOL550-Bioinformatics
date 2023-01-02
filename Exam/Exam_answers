@@ -1,0 +1,451 @@
+#!/usr/bin/bash
+
+##### A simple shell script to store answers and comments. #####################
+##### Feel free to add new lines and comments as needed. #######################
+
+
+### Student name:Kajol Tanesh Shah 
+
+
+# Question 1
+
+# bash loop to create folders and files for each question of this exam
+cd EXAM_F22
+for i in {01..13}; do mkdir Q0$i; cp Inputs/Q01/data_template.txt Q0$i/data_0$i.txt; done;
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 2
+
+#a) recursively the permissions of all subdirectories starting with Q00 to the octal permissions 750
+for i in {01..13}; do chmod 750 Q0$i; done;
+
+#b) the octal permission (i.e. numbers) associated with the dr-x--x-wx triplets
+Ans. Octal permission will be 513
+#chmod 513 
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+# Question 3
+
+#use the sftp command line tool to transfer EXAM_F22.pdf from your computer to your ~/EXAM_F22/Q002 folder on Mozart
+sftp biF22_14@216.47.151.148
+put /home/kajol/Desktop/BIOL550/Exam/Exam_F22.pdf EXAM_F22/Q002/Exam_F22.pdf
+
+
+#Using sftp, list the content of the remote to your ~/EXAM_F22/Inputs directory
+ls EXAM_F22/Inputs
+
+#Using sftp, show the current working directory of the local computer
+lpwd
+
+#Using sftp, download the file ~/EXAM_F22/Inputs/Q03/sftp.txt from Mozart to your local computer
+get /home/biF22_14/EXAM_F22/Inputs/Q03/sftp.txt /home/kajol/Desktop/BIOL550/Exam
+lls /home/kajol/Desktop/BIOL550/Exam
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 4
+
+#Make your get_PDBs.pl shell script executable, then run it
+chmod +x get_PDBs.sh
+./get_PDBs.sh
+#OR
+bash get_PDBs.sh
+
+#bash script for question 4
+#!/usr/bin/bash
+IFS=$' \t\r\n'
+
+BASE_URL='https://files.rcsb.org/download'
+MESSAGE='All PDB files downloaded!'
+mkdir ~/EXAM_F22/Q004/PDBs
+
+PDB_list=("7R98" "7B3Y" "7U09" "6YI3")
+for pdb in ${PDB_list[@]}; do
+    #echo "$BASE_URL/$pdb.pdb"
+    curl $BASE_URL/$pdb.pdb > ~/EXAM_F22/Q004/PDBs/$pdb.pdb;
+    
+done;
+
+tar -czvf PDBs.tar.gz ~/EXAM_F22/Q004/PDBs
+
+echo $MESSAGE
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 5
+
+cd Q005
+#Use git to download the scripts
+git clone https://github.com/PombertLab/Misc.git
+
+#Add the corresponding directory ~/EXAM_F22/Q005/Misc to your PATH variable by modifying your ~/.bash_profile accordingly.
+nano ~/.bash_profile
+#line added to bash_profile:- PATH=$PATH:~/EXAM_F22/Q005/Misc
+
+#Source it
+source ~/.bash_profile
+
+#Test your configuration by typing read_len_plot.py
+read_len_plot.py
+
+#Copy your ~/.bash_profile to ~/EXAM_F22/Q005/my_bashprofile
+cp ~/.bash_profile my_bashprofile
+#OR
+cp ~/.bash_profile ~/EXAM_F22/Q005/my_bashprofile
+
+#contents of bash_profile
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+PATH=$PATH:/opt/bowtie2-2.4.2/
+PATH=$PATH:/opt/Ray/
+PATH=$PATH:~/EXAM_F22/Q005/Misc
+A1=~/Assignments/Assignment_1
+
+
+export PATH
+export A1
+export HISTSIZE=50000
+export HISTFILESIZE=5000000
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 6
+
+cd Q006
+
+#Create an alias lls (for long listing) that will use ls with the -l, -a and -h flags when invoked
+#Alias created:- alias lls="ls"
+
+#Add your alias to your ~/.bashrc configuration file, then source it.
+nano ~/.bashrc
+source ~/.bashrc
+
+#Test your newly created alias on your home directory (~)
+lls ~
+lls -l ~
+lls -a ~
+lls -h ~
+
+#Copy your ~/.bashrc configuration file to ~/EXAM_F22/Q006/my_rcprofile
+cp ~/.bashrc ~/EXAM_F22/Q006/my_rcprofile
+
+#contents of bashrc
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+
+alias home="cd ../"
+
+alias mozart="ssh biF22_14@216.47.151.148"
+
+alias DNA="echo 'GCC CTT ATC GCC TCT GAG TCT'"
+
+alias lls="ls"
+
+export PATH
+
+export mozart
+export DNA
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then
+			. "$rc"
+		fi
+	done
+fi
+
+unset rc
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 7
+
+cd Q007
+
+#Create a symlink titled Scripts that points to ~/EXAM_F22/Q005/Misc from Question 5
+ln -s ~/EXAM_F22/Q005/Misc Scripts
+
+#list contents of Scripts
+ls -l Scripts
+ls -l Scripts/
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 8
+
+#Read the du man page
+man du
+
+#use du to show the count for all files in ~/EXAM_F22/Inputs using the human-readable format
+du -ah * ~/EXAM_F22/Inputs
+
+#gives total of the disk usage for all files in human-readable format in ~/EXAM_F22/Inputs
+du -ach * ~/EXAM_F22/Inputs
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 9
+
+#Use zcat to display the content of all .fasta.gz files in ~/EXAM_F22/Inputs/Q09 and redirect its output to ~/EXAM_F22/Q009/concatenated.fasta
+zcat ~/EXAM_F22/Inputs/Q09/*.fasta.gz > ~/EXAM_F22/Q009/concatenated.fasta
+
+#In a single command line, use grep to search for all lines containing the word Streptococcus, count the number of lines with wc, and write the output of this search to ~/EXAM_F22/Q009/counts.txt
+grep -e 'Streptococcus' concatenated.fasta | wc -l > counts.txt
+
+#In a single command line, use grep to search for all lines containing the word Staphylococcus, count the number of lines with wc, and append the output of this search to ~/EXAM_F22/Q009/counts.txt
+grep -e 'Staphylococcus' concatenated.fasta | wc -l >> counts.txt
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 10
+
+cd Q010
+
+#Create a regular expression that will find all lines with tRNA or rRNA features (3 rd column) and with a positive (+) strandedness (7 th column)
+Regular Expression:- '\b.+(tRNA|rRNA)\t\d+\t\d+\t.\t\+'
+
+#Test your regex with grep on ~/EXAM_F22/Inputs/Q10/genome.gff. Write the output to ~/EXAM_F22/Q010/Q10_myOutput.tsv.
+grep -P -e '\b.+(tRNA|rRNA)\t\d+\t\d+\t.\t\+' ~/EXAM_F22/Inputs/Q10/genome.gff > Q10_myOutput.tsv
+
+#compare results with expected results using diff
+diff -s Q10_myOutput.tsv ~/EXAM_F22/Inputs/Q10/Q10_desired_output.txt
+
+#compare results with expected results using wc -l
+wc -l Q10_myOutput.tsv ~/EXAM_F22/Inputs/Q10/Q10_desired_output.txt
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 11
+
+cd Q011
+#Copy the file fastQ_to_Oops.pl from ~/EXAM_F22/Inputs/ to ~/EXAM_F22/Q011/fastQ_to_A.pl
+cp ~/EXAM_F22/Inputs/Q11/fastQ_to_Oops.pl ~/EXAM_F22/Q011/fastQ_to_A.pl
+
+#Find and correct the five (5) errors in fastQ_to_A.pl
+#corrected script fastQ_to_A.pl
+#!/usr/bin/perl
+
+## Using the strict + warning pragmas to enforce good programming practices
+use warnings;   ## Useful to find potential problems in the code
+use strict;     ## Requires the use of properly defined lexical and package variables
+
+## Writing a short readme:
+## $0 is a special variable in Perl that stores the name of the script being run
+my $usage = "$0 input_file.fastq output_file.fasta\n";  ## $0 is a special variable in perl
+die "\n$usage\n" unless @ARGV;
+
+## Working with filehandles
+open FASTQ, "<", $ARGV[0]; ## Input file in FASTQ format
+open FASTA, ">", $ARGV[1]; ## Output file (we will create it in FASTA format) # error 5 - < changed to >
+
+## Notes on the FASTQ input file:
+## Sequences in FASTQ format are stored across 4 lines:
+# line 1 = sequence name (starts with an @)
+# line 2 = sequence
+# line 3 = spacer (starts with a +; not used in FASTA format)
+# line 4 = quality scores (not used in FASTA format)
+
+## Creating variables to be used later
+my $seq_name;
+my $sequence;
+my $line_counter;
+
+## Iterating through the file line per line
+while (my $line = <FASTQ>){ #error 3 filehandle changed from IN to FASTQ
+
+	chomp $line; #error 1 $lines changed to $line
+	$line_counter++;
+
+	## Using modulo to keep track of which line we are looking at:
+	my $modulo = $line_counter % 4;
+
+	## modulo = 1 => line with sequence name
+	## modulo = 2 => line with sequence
+	## modulo = 3 => line with spacer (+)
+	## modulo = 0 => line with quality score; 4 % 4 = 0, no remainder to the division
+
+	if ($modulo == 1){
+		$seq_name = $line;
+	}
+
+	elsif ($modulo == 2){
+
+		$sequence = $line;
+
+		## Breaking string to 60 ASCII characters per line with unpack()
+		## Sequence lines in FASTA format are usually 60 characters-wide
+		my @seq60_wide = unpack ("(A60)*", $line);
+
+		## Printing FASTA header
+		print FASTA ">$seq_name\n"; #error 4 changed filehandle OUT to FASTA
+
+		## Printing FASTA sequence
+		while (my $seq60 = shift@seq60_wide){ #error 2 @seq50 changed to @seq60
+			print FASTA "$seq60\n";
+		}
+
+	}
+
+}
+
+#script ends
+
+#Test your corrected code using ~/EXAM_S22/Inputs/Q11/nanopore.fastq as input
+perl fastQ_to_A.pl ~/EXAM_F22/Inputs/Q11/nanopore.fastq 
+
+#compare your output to the desired one with diff and wc -l
+diff -s output_file.fasta ~/EXAM_F22/Inputs/Q11/nanopore.fasta
+wc -l output_file.fasta ~/EXAM_F22/Inputs/Q11/nanopore.fasta
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 12
+
+cd Q012
+
+#copy ~/EXAM_S22/Inputs/Q12/reference.fasta to your working directory
+cp ~/EXAM_F22/Inputs/Q12/reference.fasta reference.fasta
+
+#Test your code on the .fastq.gz files provided in ~/EXAM_S22/Inputs/Q12/
+perl run_winnowmap.pl ~/EXAM_F22/Inputs/Q12/*.fastq.gz
+
+#perl script
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+print "$ARGV[0]";
+my @FASTQ=@ARGV;
+
+
+my $reference="reference.fasta";
+my $kmers="repetitive_k15.txt";
+#fastq=~/EXAM_S22/Inputs/Q12/nanopore_1.fastq.gz
+#output=output_1.sam
+
+system "meryl count k=15 output merylDB reference.fasta";
+
+system "meryl print greater-than distinct=0.9998 merylDB > $kmers";
+
+for my $i (0..$#FASTQ) {
+    my $o = $i+1;
+    my $fastq=$FASTQ[$i];
+    my $output="output_$o.sam";
+    #open IN, "<", $fastq;
+    #open OUT, ">", $output;
+    system "winnowmap -W $kmers -ax map-ont $reference $fastq > $output";
+}
+
+print "All alignments were performed";
+
+#script ends
+
+#compare your output files with the expected ones in ~/EXAM_S22/Inputs/Q12/ using diff and wc -l
+diff -s output_1.sam ~/EXAM_F22/Inputs/Q12/output_1.sam
+wc -l output_1.sam ~/EXAM_F22/Inputs/Q12/output_1.sam
+
+diff -s output_2.sam ~/EXAM_F22/Inputs/Q12/output_2.sam
+wc -l output_2.sam ~/EXAM_F22/Inputs/Q12/output_2.sam
+
+diff -s output_3.sam ~/EXAM_F22/Inputs/Q12/output_3.sam
+wc -l output_3.sam ~/EXAM_F22/Inputs/Q12/output_3.sam
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+
+# Question 13
+
+cd Q013
+
+#perl script
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Getopt::Long qw(GetOptions);
+
+my $blastf;
+my $productf;
+my $output;
+
+my %products=();
+
+#Parsing @ARGV with GetOptions
+GetOptions(
+'b=s' => \$blastf,
+'p=s' => \$productf,
+'out=s' => \$output
+);
+
+print "$blastf";
+print "$productf";
+print "$output";
+
+open INB, "<", $blastf;
+open INP, "<", $productf;
+open OUT, ">", $output;
+
+while (my $line = <INP>) {
+        chomp $line;  
+        #$exp =~ /\#\#\#/;      
+        if ($line =~ /\#\#\#/) {
+            print "Comment encountered, skipping it";
+        }
+        else {
+            ##function split(), and grab the following columns: protein names and its associated function
+            my @col = split(/\t/, $line);
+            $products{$col[0]} = $col[1];
+            
+        }
+
+    }
+
+while (my $line2 = <INB>) {
+        chomp $line2;        
+        ##function split(), and grab the following columns: query, match and e-value
+        my @col2 = split(/\t/, $line2);
+        my $query = $col2[0];
+        my $match = $col2[1];
+        my $evalue = $col2[10];
+    
+
+        for (keys %products){
+            #print "$_ $products{$_}\n";
+            if ($_ eq $match){
+                ##prints the query, match, e-value and function (separated by tabs) to the hits_per_protein.txt output file
+                print OUT "$query\t$match\t$evalue\t$products{$_}\n";
+
+            }
+        }
+}
+
+#script ends
+
+#Takes the queries.blastp.6 and products.txt files together with an output file (parsed_output.tsv) from the list of argument
+perl blast_parser.pl -b ~/EXAM_F22/Inputs/Q13/queries.blastp.6 -p ~/EXAM_F22/Inputs/Q13/products.txt -out parsed_output.tsv
+
+#use diff and wc -l to compare your output to the desired one
+diff -s parsed_output.tsv ~/EXAM_F22/Inputs/Q13/Q13_desired_output.txt
+wc -l parsed_output.tsv ~/EXAM_F22/Inputs/Q13/Q13_desired_output.txt
+
+##-----------------------------------------------------------------------------------------------------------------------------------
+

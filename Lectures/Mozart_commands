@@ -1,0 +1,219 @@
+Terminal
+
+$ ssh biF22_14@216.47.151.148
+old password:- dzGn`s21zy
+new password:- Kesha#0310
+to logout:- $exit
+to change password:- $passwd
+
+path:- $pwd
+
+$cd .. :- previous directory
+linux commands
+$ls :- lists all the directories
+$ls -la :- lists all the files
+$ls -lh
+
+hidden files:- .files
+
+manual command:- $ man command_name
+eg:- $man ls
+$man man
+
+-h :- for help
+
+to search for some file:-
+$ls *
+eg:[- $ls *.tgz
+
+$head -n file_name :- print first  n lines
+$tail
+
+$touch filename :- creates empty file
+
+$nano filename :- to edit file
+Ctrl + S :- save the file
+ctrl + x :- exit
+ctrl + C :- end exit
+
+$rm filename :- to remove files
+$rm -R directory name:- removes directory even if it's not empty
+
+$mkdir:- create directory
+
+$rmdir :- works only if directory is empty
+$rm -R :- to remove non-empty directories
+
+
+absolute path:- full path
+relative path:- ../path
+
+copy files:- $cp
+
+move files:- $ mv old_file new_file
+
+tar command:-
+tar -cavf ~/Assignments/A1.tar.gz ~/Assignments/Assignment_1
+-a option will assign the compressing tool automatically
+
+disk usage:-
+du
+du -sh
+disk file system
+df
+
+nano .bash_profile
+[biF22_14@Mozart ~]$ source .bash_profile
+[biF22_14@Mozart ~]$ echo $HISTSIZE
+
+To escape from open commands, press Q
+
+
+dmesg | less ## dmesg shows kernel messages
+
+
+grep
+
+Exercise 3
+
+$ grep -e "perl" /opt/scripts/*.pl
+count:-
+grep -c -e "perl" /opt/scripts/*.pl 
+
+To check how many files contain the word
+grep -c -e "Fasta" /opt/scripts/*.pl | wc -l 
+
+5) grep -e "fa*" /opt/scripts/*.pl
+
+it displays searches with all the Fs as it treats it as a regular expression
+if you just want to search fa -> fa+ or faa* 
+
+less -> to display files
+
+cat command
+[biF22_14@Mozart ~]$ nano f1.txt
+[biF22_14@Mozart ~]$ nano f2.txt
+[biF22_14@Mozart ~]$ cat f1.txt f2.txt > f3.txt (more than 2 files can also be concatenated
+[biF22_14@Mozart ~]$ cat f3.txt
+
+append:- 
+[biF22_14@Mozart ~]$ cat f1.txt f2.txt >> f3.txt
+
+
+sed:-
+[biF22_14@Mozart ~]$ cat shinchan.txt
+cat: shinchan.txt: No such file or directory
+[biF22_14@Mozart ~]$ nano shinchan.txt
+[biF22_14@Mozart ~]$ sed 's/shinchan/Shinchan/' shinchan.txt
+my name is Shinchan. I am loved by all. FUll name shinchan nohara.
+[biF22_14@Mozart ~]$ sed 's/shinchan/Shinchan/g' shinchan.txt
+my name is Shinchan. I am loved by all. FUll name Shinchan nohara.
+[biF22_14@Mozart ~]$ cat shinchan.txt
+my name is shinchan. I am loved by all. FUll name shinchan nohara.
+[biF22_14@Mozart ~]$ sed 's/shinchan/Shinchan/g' shinchan.txt > shinchan.txt
+[biF22_14@Mozart ~]$ cat shinchan.txt
+[biF22_14@Mozart ~]$ cat shinchan.txt
+[biF22_14@Mozart ~]$ nano shinchan.txt
+[biF22_14@Mozart ~]$ sed 's/shinchan/Shinchan/g' shinchan.txt > Shinchan.txt
+[biF22_14@Mozart ~]$ sed 's/shinchan/Shinchan/g' shinchan.txt > shinchan.txt
+[biF22_14@Mozart ~]$ cat shinchan.txt
+[biF22_14@Mozart ~]$ cat Shinchan.txt
+my name is Shinchan. Shinchan nohara.
+[biF22_14@Mozart ~]$ less shinchan.txt
+biF22_14@Mozart ~]$ sed 's/Shinchan/shinchan/g' Shinchan.txt >> shinchan.txt
+[biF22_14@Mozart ~]$ cat Shinchan.txt
+my name is Shinchan. Shinchan nohara.
+[biF22_14@Mozart ~]$ sed 's/Shinchan/shinchan/g' Shinchan.txt >> Shinchan.txt
+[biF22_14@Mozart ~]$ cat Shinchan.txt
+my name is Shinchan. Shinchan nohara.
+my name is shinchan. shinchan nohara.
+
+
+Exercise 4:-
+
+[biF22_14@Mozart ~]$ grep -e "linux" dmesg > linux_boot.txt
+grep: dmesg: No such file or directory
+[biF22_14@Mozart ~]$ dmesg | grep -e "linux" > linux_boot.txt 
+[biF22_14@Mozart ~]$ linux_boot.txt
+bash: linux_boot.txt: command not found...
+[biF22_14@Mozart ~]$ cat linux_boot.txt
+[   17.519964] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[   18.998446] evm: security.selinux
+[   19.779946]     TERM=linux
+[biF22_14@Mozart ~]$ dmesg | grep -e "PCI" >> linux_boot.txt 
+[biF22_14@Mozart ~]$ sed 's/PCI/AGP/g' linux-boot.txt > boot-test.txt
+sed: can't read linux-boot.txt: No such file or directory
+[biF22_14@Mozart ~]$ sed 's/PCI/AGP/g' linux_boot.txt > boot_test.txt
+[biF22_14@Mozart ~]$ cat boot_test.txt
+grep -e 'PCI' boot_test.txt
+[biF22_14@Mozart ~]$ diff boot_test.txt linux_boot.txt -> compare files
+
+for loop :-
+[biF22_14@Mozart ~]$ for i in {00..30}
+> do
+> echo "$i"
+> done
+
+[biF22_14@Mozart ~]$ ^C
+[biF22_14@Mozart ~]$ for i in {00..05}
+> do
+> touch file_$i.txt
+> done
+
+precedence of local variables is higher than global
+[biF22_14@Mozart ~]$ export i=25
+[biF22_14@Mozart ~]$ for i in {00..05}; do touch file_$i.txt; done
+[biF22_14@Mozart ~]$ lsx`
+02_Bash    04_Perl               06_Assembly           file_00.txt  file_02.txt  file_04.txt  hhh               home_content.std
+03_RegExp  05_Sequence_analysis  07_Genome_annotation  file_01.txt  file_03.txt  file_05.txt  home_content.err
+
+
+
+Excercise 5
+
+[biF22_14@Mozart ~]$ for i in {00..100}; do touch Wonderful_$i; mkdir Loops_$i; mv Wonderful_$i Loops_$i; done; echo "All done"; 
+All done
+
+remove non-empty directories recursively:-
+[biF22_14@Mozart ~]$ rm -r Loops_*
+
+
+Bash script:-
+
+#! -> shabang
+#!/usr/bin/bash -> tells the interpreter that it's a bash script
+
+To run bash script:-
+bash helloworld.sh
+
+change permissions:-
+[biF22_14@Mozart ~]$ bash helloworld.sh
+Hello Kajol
+[biF22_14@Mozart ~]$ chmod +x helloworld.sh
+[biF22_14@Mozart ~]$ chmod 700 helloworld.sh
+[biF22_14@Mozart ~]$ chmod 550 pwners.txt
+
+
+another way to execute bash script:-
+[biF22_14@Mozart ~]$ ./helloworld.sh
+
+change ownership:-
+biF22_14@Mozart ~]$ chown kajol helloworld.sh
+chown: invalid user: ‘kajol’
+[biF22_14@Mozart ~]$ chown biF22_14 helloworld.sh
+chgrp biF22_14 helloworld.sh
+
+
+git pull -> updates the code
+
+sftp biF22_14@216.47.151.148
+
+top
+who
+
+screen -> allows connections and disconnections
+screen -S TOP -> stop/detach (TOP is screen name -> screen0 TOP)
+screen -r TOP -> resume
+
+you can break long cmd with \
+Ctrl+A+D 

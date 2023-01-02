@@ -1,0 +1,54 @@
+POSIX (Portable Operating System Interface) is a set of standard operating system interfaces based on the Unix operating system
+Perl
+
+Online real-time regular expression testers
+http://regexr.com/
+## My favorite
+http://regexpal.com/
+https://regex101.com/
+
+{0,9} -> range -> match for occurences preceding the range 
+eg. [a-z]{0,9}
+
+^ Matches at the start of the string
+$ Matches at the end of the string
+
+The alternative operator | can only be used in () brackets
+in [] brackets, it won't be treated as alternative char instead as a regular char
+
+Backslashing
+Converts meta to regular characters in searches
+eg:-
+
+\\
+\^
+\$
+
+[E][C][U]+\w+
+
+exercise 2
+
+1) [E][C][U][0-9]+
+2) [E][C][U][\w]+0\b
+
+
+Exercise 5
+1)
+\s..K
+\b\w{2}K
+\s\b\w{2}K[-A-Z]+$
+
+2)
+\b\w{2}[KS]\w{5}I
+\b\w{2}[KS](-{0,}\w{5}|\w{5}I)
+\b\w{2}[KS]-*\w{5}
+
+3)
+\b[CO]\w*[ad]\b
+^\b(C|O)\w*(a|d)\b
+
+$ -> will look for end of the line
+
+Assignment 2 ques 3
+^\bdef:\s"[A-Za-z\s.,]+(chromatin|telomere|histone)+.*"
+^\bdef:\s".*(chromatin|telomere|histone)+.*

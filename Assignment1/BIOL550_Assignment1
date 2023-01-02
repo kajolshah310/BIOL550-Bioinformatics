@@ -1,0 +1,126 @@
+#Question 1
+
+mkdir Assignments
+mkdir Assignments/Assignment_1
+for i in {1..6}; do mkdir Assignments/Assignment_1/Q$i; touch Assignments/Assignment_1/Q$i/data_Q$i.txt; done; 
+ls Assignments/Assignment_1
+
+#------------------------------------------------------------------------------------------------------------------
+#Question 2
+
+tar -czvf ~/Assignments/A1.tar.gz ~/Assignments/Assignment_1 
+tar -cjvf ~/Assignments/A1.tar.bz2 ~/Assignments/Assignment_1 
+mkdir ~/Assignments/A1_decompressed
+mv ~/Assignments/A1.tar.gz ~/Assignments/A1_decompressed
+cd ~/Assignments/A1_decompressed
+tar -xvf A1.tar.gz
+
+#------------------------------------------------------------------------------------------------------------------
+#Question 3
+
+nano ~/.bashrc
+source ~/.bashrc
+
+#~/.bashrc contents
+
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+
+alias home="cd ../"
+
+alias mozart="ssh biF22_14@216.47.151.148"
+
+alias DNA="echo 'GCC CTT ATC GCC TCT GAG TCT'"
+
+export PATH
+
+export mozart
+export DNA
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+        for rc in ~/.bashrc.d/*; do
+                if [ -f "$rc" ]; then
+                        . "$rc"
+                fi
+        done
+fi
+
+unset rc
+
+#------------------------------------------------------------------------------------------------------------------
+#Question 4
+
+ln -s ~/Assignments/Assignment_1/Q1/data_Q1.txt data_1
+export A1=~/Assignments/Assignment_1
+cd $A1
+echo $A1
+nano ~/.bash_profile
+source ~/.bash_profile
+
+#~/.bash_profile contents
+
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+PATH=$PATH:/opt/bowtie2-2.4.2/
+PATH=$PATH:/opt/Ray/
+A1=~/Assignments/Assignment_1
+
+
+export PATH
+export A1
+export HISTSIZE=50000
+export HISTFILESIZE=5000000
+
+# User specific environment and startup programs
+
+#------------------------------------------------------------------------------------------------------------------
+#Question 5
+
+#bash script 
+
+#!/usr/bin/bash
+
+#Creates a folder 
+mkdir ~/Assignments/Assignment_1/Sequencing_data
+#Copies all files ending with the file extension .fastq.gz from one directory to another
+cp /media/Data_2/BIOL550/tmp/*.fastq.gz ~/Assignments/Assignment_1/Sequencing_data
+#change directory
+cd ~/Assignments/Assignment_1/Sequencing_data
+#Decompresses all the .fastq.gz
+gunzip -k *.fastq.gz
+#Concatenates all the .fastq files into a single file
+cat *.fastq > pacbio.fastq
+#Changes the permissions of pacbio.fastq to 644
+chmod 644 pacbio.fastq
+echo 'PacBio data ready to be analyzed!'
+
+#------------------------------------------------------------------------------------------------------------------
+
+#Question 6
+
+curl https://www.iit.edu/sites/default/files/2022-08/mies-campus-accessibility-map-2022.pdf > ~/Assignments/Assignment_1/Q1/IllinoisTech_campus_map.pdf
+
+
+
+
+
+
+

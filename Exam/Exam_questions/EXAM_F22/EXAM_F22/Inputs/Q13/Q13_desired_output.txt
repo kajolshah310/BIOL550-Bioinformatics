@@ -1,0 +1,84 @@
+HOP50_01g00150	A3770_01p00230	1.75e-168	light harvesting complex protein I-20
+HOP50_01g00150	A3770_02p12540	4.35e-45	chloroplast chlorophyll a-b binding protein
+HOP50_01g00150	A3770_01p00710	2.71e-44	light-harvesting complex II chlorophyll a-b binding protein M3
+HOP50_01g00150	A3770_12p66310	2.19e-43	chlorophyll a/b-binding protein
+HOP50_01g00150	A3770_05p37580	2.49e-42	light-harvesting protein of photosystem II
+HOP50_01g00150	A3770_01p00700	2.37e-38	light-harvesting protein of photosystem II
+HOP50_01g00150	A3770_03p26570	2.63e-37	light-harvesting protein of photosystem I
+HOP50_01g00150	A3770_04p32660	3.73e-37	light-harvesting protein of photosystem I
+HOP50_01g00150	A3770_04p32650	4.37e-37	light-harvesting protein of photosystem I
+HOP50_01g00150	A3770_07p48360	5.44e-35	chlorophyll a-b binding protein
+HOP50_01g00150	A3770_16p77700	1.98e-31	chlorophyll a/b binding protein
+HOP50_01g04320	A3770_01p04440	0.0	hypothetical protein
+HOP50_01g01090	A3770_01p01180	4.78e-53	hypothetical protein
+HOP50_01g08030	A3770_01p08160	0.0	pumilio RNA-binding domain-containing protein
+HOP50_01g08610	A3770_01p08730	0.0	hypothetical protein
+HOP50_01g08610	A3770_01p08730	1.03e-44	hypothetical protein
+HOP50_01g08320	A3770_01p08440	3.34e-86	hypothetical protein
+HOP50_01g08320	A3770_03p26930	2.58e-54	hypothetical protein
+HOP50_01g05110	A3770_01p05230	0.0	Ring zinc finger protein
+HOP50_01g05240	A3770_01p05360	0.0	hypothetical protein
+HOP50_01g02460	A3770_01p02550	1.25e-147	N-acetyltransferase
+HOP50_01g08310	A3770_01p08430	0.0	LMBR1 domain-containing protein
+HOP50_01g08310	A3770_06p42810	7.38e-36	LMBR1-like membrane protein
+HOP50_01g07400	A3770_01p07560	0.0	pseudouridine synthase
+HOP50_01g02520	A3770_01p02610	5.75e-145	FKBP-type peptidyl-prolyl cis-trans isomerase
+HOP50_01g02520	A3770_05p39720	3.75e-22	FKBP-type peptidyl-prolyl cis-trans isomerase
+HOP50_01g02520	A3770_03p25370	3.54e-21	FKBP-type peptidyl-prolyl cis-trans isomerase
+HOP50_01g05030	A3770_01p05150	0.0	G-protein coupled receptor
+HOP50_01g07930	A3770_01p08060	0.0	mitogen-activated protein kinase 7
+HOP50_01g07930	A3770_02p12710	3.17e-72	mitogen-activated protein kinase
+HOP50_01g07930	A3770_13p70710	7.89e-62	serine/threonine protein kinase
+HOP50_01g07930	A3770_13p70060	1.72e-57	serine/threonine protein kinase
+HOP50_01g07930	A3770_09p55180	5.51e-51	cyclin dependent kinase
+HOP50_01g07930	A3770_04p27820	3.67e-50	mitogen-activated protein kinase
+HOP50_01g07930	A3770_05p37860	3.94e-49	mitogen-activated protein kinase
+HOP50_01g07930	A3770_19p83970	9.37e-49	serine/threonine protein kinase
+HOP50_01g07930	A3770_02p12200	1.27e-48	mitogen-activated protein kinase
+HOP50_01g07930	A3770_01p01700	2.44e-48	CDK activating kinase
+HOP50_01g07930	A3770_01p09760	6.03e-43	serine/threonine protein kinase
+HOP50_01g07930	A3770_01p01970	4.26e-42	mitogen-activated protein kinase
+HOP50_01g07930	A3770_03p22340	4.55e-41	dual specificity protein kinase
+HOP50_01g07930	A3770_04p30050	1.04e-36	dual-specificity tyrosine-phosphorylation-regulated kinase
+HOP50_01g07930	A3770_04p29730	3.81e-36	cyclin-dependent kinase
+HOP50_01g07930	A3770_14p71550	3.13e-33	serine/threonine protein kinase
+HOP50_01g07930	A3770_10p57510	5.07e-30	serine/threonine protein kinase
+HOP50_01g07930	A3770_08p53460	1.99e-27	cyclin dependent protein kinase
+HOP50_01g07930	A3770_03p23160	3.04e-25	serine/threonine protein kinase
+HOP50_01g07930	A3770_01p03700	3.37e-25	serine/threonine protein kinase
+HOP50_01g07930	A3770_15p74880	1.30e-24	protein kinase
+HOP50_01g07930	A3770_02p18650	3.00e-24	dual specificity protein kinase
+HOP50_01g07930	A3770_04p28490	5.82e-22	serine/threonine-protein kinase
+HOP50_01g09300	A3770_01p09430	0.0	Arf GTPase activating protein
+HOP50_01g09280	A3770_01p09410	0.0	ribokinase xylose isomerase
+HOP50_01g09280	A3770_02p18080	7.60e-48	ribokinase
+HOP50_01g02570	A3770_01p02670	0.0	AMP-dependent synthetase/ligase
+HOP50_01g02570	A3770_01p02660	0.0	AMP-dependent synthetase/ligase
+HOP50_01g02570	A3770_01p02650	7.40e-36	hypothetical protein
+HOP50_01g02980	A3770_01p03080	1.39e-115	hypothetical protein
+HOP50_01g08190	A3770_01p08310	0.0	adenylate kinase
+HOP50_01g08190	A3770_11p62130	1.75e-97	adenylate kinase
+HOP50_01g08190	A3770_11p62130	1.75e-97	adenylate kinase
+HOP50_01g08190	A3770_18p82890	1.05e-64	adenylate kinase
+HOP50_01g08190	A3770_18p82890	1.05e-64	adenylate kinase
+HOP50_01g08190	A3770_06p42920	1.65e-26	adenylate kinase
+HOP50_01g08190	A3770_06p42920	1.65e-26	adenylate kinase
+HOP50_01g01370	A3770_01p01480	7.11e-162	class I peptide chain release factor
+HOP50_01g09800	A3770_01p09940	0.0	glutamate decarboxylase
+HOP50_01g01450	A3770_01p01560	0.0	DEAH-box nuclear pre-mRNA splicing factor
+HOP50_01g01450	A3770_01p04300	0.0	DEAH-box nuclear pre-mRNA splicing factor
+HOP50_01g01450	A3770_03p26590	4.53e-178	P-loop-containing nucleoside triphosphate hydrolase
+HOP50_01g01450	A3770_04p29110	1.88e-172	P-loop-containing nucleoside triphosphate hydrolase
+HOP50_01g01450	A3770_06p42300	1.50e-159	pre-mRNA-splicing factor ATP-dependent RNA helicase
+HOP50_01g01450	A3770_04p33350	1.13e-123	ATP-dependent RNA helicase
+HOP50_01g01450	A3770_02p16840	2.65e-74	P-loop-containing nucleoside triphosphate hydrolase
+HOP50_01g01450	A3770_03p25390	1.57e-72	DExH-box ATP-dependent RNA helicase
+HOP50_01g01450	A3770_03p21780	2.94e-43	P-loop-containing nucleoside triphosphate hydrolase
+HOP50_01g01450	A3770_03p21780	9.14e-40	P-loop-containing nucleoside triphosphate hydrolase
+HOP50_01g01450	A3770_05p36630	6.47e-42	P-loop-containing nucleoside triphosphate hydrolase
+HOP50_01g01450	A3770_05p36630	3.52e-31	P-loop-containing nucleoside triphosphate hydrolase
+HOP50_01g01450	A3770_01p00630	1.16e-34	P-loop nucleoside triphosphate helicase
+HOP50_01g01450	A3770_01p00630	4.06e-34	P-loop nucleoside triphosphate helicase
+HOP50_01g05800	A3770_01p05940	1.41e-100	phosphotyrosine protein phosphatase
+HOP50_01g00730	A3770_01p00820	0.0	Dol-P-Man:Man(7)GlcNAc(2)-PP-Dol alpha-1,6-mannosyltransferase
+HOP50_01g01550	A3770_01p01660	1.83e-75	hypothetical protein

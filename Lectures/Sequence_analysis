@@ -1,0 +1,28 @@
+Sequence analysis
+
+Amino Acid
+ATG
+
+E-value -> lower the score, better
+probability that 2 sequences are different
+0 is the lowest value
+
+
+sequences:-
+
+if lot of A T G, it's nuclei type
+
+if starts with M, it's protein
+
+
+Ex 6
+
+makeblastdb -in my.fasta -dbtype prot -out my -title 'PlastidProteins'
+
+
+Ex 7
+
+blastp - protein, blastn - nuclei
+blastp -num_threads 2 -query BLAST/ARABthali.fasta -db my -evalue 1e-10 -culling_limit 10 -outfmt 6 -out ARABthali.blastp
+
+
